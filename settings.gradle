@@ -1,4 +1,4 @@
-include ':demo'
+//include ':demo'
 include ':jad_yun_core'
 include ':jad_yun_splash'
 include ':jad_yun_native'
