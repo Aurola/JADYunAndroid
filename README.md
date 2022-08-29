@@ -13,7 +13,7 @@ repositories {
 
 
 二、在module的build.gradle中配置：
-## 单广告位按需接入 
+## 方式1. 单广告位按需接入 
 
 ```
 dependencies {
@@ -26,7 +26,7 @@ dependencies {
 }
 ```
 
-## 全广告位接入
+## 方式2. 全广告位接入
 ```
 dependencies {
     implementation 'com.github.Aurola.JADYunAndroid:jad_yun_sdk:1.0.2'
