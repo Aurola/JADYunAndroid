@@ -1,10 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'jacoco'
-
-jacoco {
-    toolVersion = "0.8.8" //代码覆盖库jacoco版本号
-}
-
 def androidCfg = rootProject.ext.androidConfig
 def AndroidLibraries = rootProject.ext.AndroidLibraries
 def ThirdLibraries = rootProject.ext.ThirdLibraries
@@ -21,7 +15,6 @@ android {
         versionName androidCfg.demoVersionName
 
         vectorDrawables.useSupportLibrary = true
-        testInstrumentationRunner UnitTestLibraries.testInstrumentationRunner
 
 
         ndk {
@@ -44,7 +37,6 @@ android {
 
     buildTypes {
         debug {
-            testCoverageEnabled true
         }
         release {
             minifyEnabled true
@@ -69,31 +61,6 @@ android {
     }
 
 }
-
-project.gradle.taskGraph.whenReady {
-    connectedJadDebugAndroidTest {
-        ignoreFailures = true
-    }
-}
-
-android.applicationVariants.all { variant ->
-    if (variant.buildType.name == "release") {
-        // 修改aar名称
-        variant.outputs.all { output ->
-            outputFileName = "jad_yun_sdk_android_${variant.buildType.name}" +
-                    "_v${android.defaultConfig.versionName}_${releaseTime()}.apk"
-        }
-    } else {
-        variant.outputs.all { output ->
-            outputFileName = "jad_yun_sdk_android_${variant.buildType.name}_v${android.defaultConfig.versionName}.apk"
-        }
-    }
-}
-
-def releaseTime() {
-    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+08:00"))
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.?ar'])
     implementation AndroidLibraries.appcompat
@@ -101,21 +68,17 @@ dependencies {
     implementation AndroidLibraries.recyclerview
     implementation ThirdLibraries.glide
 
-    testImplementation UnitTestLibraries.junit
-    androidTestImplementation UnitTestLibraries.truth
-    androidTestImplementation UnitTestLibraries.runner
-    androidTestImplementation UnitTestLibraries.mockito
-    debugImplementation UnitTestLibraries.jacoco
-
-
     //这里只做OAID 引用的方法: 将下载好的oaid  aar 放到 demo libs 目录下。具体请参看移动安全联盟
     // 如需要请到移动安全联盟 下载 相关版本 进行OAID 获取  http://www.msa-alliance.cn/col.jsp?id=120
 
 //    implementation(name: 'oaid_sdk_1.0.23', ext: 'aar')
-implementation(name: 'jad_yun_sdk_v2.0.1', ext: 'aar')
     implementation files('libs/oaid_sdk_1.0.23.aar')
-    implementation 'com.openmediation:om-android-sdk:2.2.0'
-    implementation 'com.openmediation.adapters:adtiming:2.5.0'
-    //    implementation 'com.openmediation:om-android-sdk:2.6.5@aar'
+    implementation project(path: ':jad_yun_core')
+    implementation project(path: ':jad_yun_banner')
+    implementation project(path: ':jad_yun_splash')
+    implementation project(path: ':jad_yun_feed')
+    implementation project(path: ':jad_yun_interstitial')
+    implementation project(path: ':jad_yun_native')
+
 }
 

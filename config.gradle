@@ -38,9 +38,9 @@ ext {
             junit                    : 'junit:junit:4.13.2',
             truth                    : 'com.google.truth:truth:1.0',
             runner                   : 'com.android.support.test:runner:1.0.2',
-            jacoco                   : 'org.jacoco:org.jacoco.core:0.8.8',
+            jacoco                   : 'org.jacoco:org.jacoco.jad_yun_core:0.8.8',
             mockito                  : 'org.mockito:mockito-android:3.5.10',
-            espresso                 : 'com.android.support.test.espresso:espresso-core:3.0.2',
+            espresso                 : 'com.android.support.test.espresso:espresso-jad_yun_core:3.0.2',
             rules                    : "com.android.support.test:rules:1.0.2"
     ]
 
