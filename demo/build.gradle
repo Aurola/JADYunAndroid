@@ -74,8 +74,7 @@ dependencies {
 //    implementation(name: 'oaid_sdk_1.0.23', ext: 'aar')
     implementation files('libs/oaid_sdk_1.0.23.aar')
     implementation project(path: ':jad_yun_core')
-//    implementation project(path: ':jad_yun_banner')
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_banner:1.0.0'
+    implementation project(path: ':jad_yun_banner')
     implementation project(path: ':jad_yun_splash')
     implementation project(path: ':jad_yun_feed')
     implementation project(path: ':jad_yun_interstitial')
