@@ -17,12 +17,12 @@ repositories {
 
 ```
 dependencies {
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_core:1.0.2'
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_splash:1.0.2'
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_banner:1.0.2'
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_feed:1.0.2'
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_interstitial:1.0.2'
-    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_native:1.0.2'
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_core:1.0.2'   //必选，核心功能
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_splash:1.0.2' //可选，开屏广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_banner:1.0.2' //可选，横幅广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_feed:1.0.2'   //可选，信息流广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_interstitial:1.0.2' //可选，插屏广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_native:1.0.2' //可选，自渲染广告
 }
 ```
 
