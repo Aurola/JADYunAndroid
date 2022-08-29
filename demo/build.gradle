@@ -73,12 +73,12 @@ dependencies {
 
 //    implementation(name: 'oaid_sdk_1.0.23', ext: 'aar')
     implementation files('libs/oaid_sdk_1.0.23.aar')
-    implementation project(path: ':jad_yun_core')
-    implementation project(path: ':jad_yun_banner')
-    implementation project(path: ':jad_yun_splash')
-    implementation project(path: ':jad_yun_feed')
-    implementation project(path: ':jad_yun_interstitial')
-    implementation project(path: ':jad_yun_native')
+    implementation project(path: ':multiple:jad_yun_core')
+    implementation project(path: ':multiple:jad_yun_banner')
+    implementation project(path: ':multiple:jad_yun_splash')
+    implementation project(path: ':multiple:jad_yun_feed')
+    implementation project(path: ':multiple:jad_yun_interstitial')
+    implementation project(path: ':multiple:jad_yun_native')
 
 }
 
