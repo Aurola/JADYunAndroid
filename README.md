@@ -1,5 +1,6 @@
 # JADYunAndroid
-京东广告联盟 京准通SDK
+京东广告联盟 京准通SDK [官方接入文档](https://help-sdk-doc.jd.com/ansdkDoc/)
+
 
 # 接入说明
 

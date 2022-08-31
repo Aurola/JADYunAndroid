@@ -62,7 +62,7 @@ android {
 
 }
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.?ar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation AndroidLibraries.appcompat
     implementation AndroidLibraries.constraint
     implementation AndroidLibraries.recyclerview
@@ -70,15 +70,17 @@ dependencies {
 
     //这里只做OAID 引用的方法: 将下载好的oaid  aar 放到 demo libs 目录下。具体请参看移动安全联盟
     // 如需要请到移动安全联盟 下载 相关版本 进行OAID 获取  http://www.msa-alliance.cn/col.jsp?id=120
-
-//    implementation(name: 'oaid_sdk_1.0.23', ext: 'aar')
     implementation files('libs/oaid_sdk_1.0.23.aar')
-    implementation project(path: ':jad_yun_core')
-    implementation project(path: ':jad_yun_banner')
-    implementation project(path: ':jad_yun_splash')
-    implementation project(path: ':jad_yun_feed')
-    implementation project(path: ':jad_yun_interstitial')
-    implementation project(path: ':jad_yun_native')
 
+    //方式1. 单广告位按需接入
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_core:1.0.2'   //必选，核心功能
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_splash:1.0.2' //可选，开屏广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_banner:1.0.2' //可选，横幅广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_feed:1.0.2'   //可选，信息流广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_interstitial:1.0.2' //可选，插屏广告
+    implementation 'com.github.Aurola.JADYunAndroid:jad_yun_native:1.0.2' //可选，自渲染广告
+
+    //方式2. 全广告位接入
+    //implementation 'com.github.Aurola.JADYunAndroid:jad_yun_sdk:1.0.2'
 }
 
