@@ -1,5 +1,5 @@
 ### 概况
-SDK 具体使用情况，请参看[官方接入文档](https://help-sdk-doc.jd.com/ansdkDoc/access_docs/Android/SDK%E9%9B%86%E6%88%90/Android%20SDK%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E9%9B%86%E6%88%90.html)
+京东广告联盟 京准通SDK [官方接入文档](https://help-sdk-doc.jd.com/ansdkDoc/)
 
 ### Demo 工程结构说明
 
@@ -7,9 +7,9 @@ SDK 具体使用情况，请参看[官方接入文档](https://help-sdk-doc.jd.c
 
 2、DemoMainActivity.java 为demo的主页面，用于导航到各种广告页面。
 
-3、com.jd.ad.demo.ex 包下为模板广告相关demo
+3、com.jd.ad.demo.expressad 包下为模板广告相关demo
 
-4、com.jd.ad.demo.na 包下为自渲染相关demo
+4、com.jd.ad.demo.nativead 包下为自渲染相关demo
 
 
 
